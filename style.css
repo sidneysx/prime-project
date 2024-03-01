@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --text-color: #fff;
+    --bg-mob: url(./fotos/fundo-mobile.jpg);
+    --stok-color: rgba(255, 255, 255, 0.5);
+    --fundo-color: rgba(255, 255, 255, 0.05);
+    --fundo-color-hover: rgba(0, 0, 0, 0.02);
+    --social-color: rgba(255, 255, 255, 0.2);
+    --switch: url(./fotos/mon-stars.svg);
+  }
+  
+  .light {
+    --text-color: black;
+    --bg-mob: url(./fotos/fundo-mob-fff.jpg);
+    --stok-color: rgba(0, 0, 0, 0.5);
+    --fundo-color: rgba(0, 0, 0, 0.05);
+    --fundo-color-hover: rgba(0, 0, 0, 0.02);
+    --social-color: rgba(0, 0, 0, 0.1);
+    --switch: url(./fotos/sun.svg);
+  }
+  
+  body {
+    /* background-image: url(./fotos/fundo-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;*/
+  
+    background: var(--bg-mob) no-repeat top center/cover;
+    height: 100vh;
+  }
+  
+  body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+  }
+  
+  #container {
+    width: 100%;
+    max-width: 588px;
+    margin: 58px auto 0px;
+    padding: 0 24px;
+  }
+  
+  #profile {
+    text-align: center;
+    padding: 24px;
+  }
+  
+  #profile img {
+    width: 112px;
+  }
+  
+  #profile P {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+  }
+  
+  #switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+  }
+  
+  #switch button {
+    width: 32px;
+    height: 32px;
+    background: #fff var(--switch) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    animation: slide-back 0.4s;
+  }
+  #switch button:hover{
+    outline: 8px solid var(--social-color);
+  }
+  
+  .light #switch button {
+    animation: slide-in 0.4s forwards;
+  }
+  
+  #switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--fundo-color);
+    border: 1px solid var(--stok-color);
+    -webkit-animation-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+  }
+  
+  /*Links*/
+  
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 0;
+  }
+  
+  ul li a {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+  
+    background: var(--fundo-color);
+    border: 1px solid var(--stok-color);
+    border-radius: 8px;
+    -webkit-animation-backdrop-filter: blur(4px);
+  
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.4s;
+  }
+  
+  ul li a:hover {
+    background: var(--fundo-color-hover);
+    border: 1.5px solid var(--text-color);
+  }
+  
+  #social_links {
+    display: flex;
+    padding: 24px 0;
+    font-size: 24px;
+    justify-content: center;
+  }
+  
+  #social_links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  
+    transition: background 0.2s;
+    border-radius: 50%;
+  }
+  
+  #social_links a:hover {
+    background: var(--social-color);
+    border-radius: 50%;
+  }
+  
+  footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  @media (min-width: 700px) {
+    :root {
+      --bg-mob: url(./fotos/bg-desktop.jpg);
+    }
+    .light {
+      --bg-mob: url(./fotos/bg-desktop-light.jpg);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  @keyframes slide-back {
+    from {
+      left: 50%;
+    }
+    to {
+      left: 0;
+    }
+  }
+  
