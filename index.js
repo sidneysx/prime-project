@@ -11,7 +11,7 @@ function toggleMode() {
       img.setAttribute("src", "./fotos/avatar-light.png")
       img.setAttribute("alt", "Sid na Praia")
     } else {
-      img.setAttribute("src", "./fotos/avatar-dark.png")
+      img.setAttribute("src", "./fotos/Avatar-dark.png")
       img.setAttribute("alt", "Sid no Espelho")
     }
   
